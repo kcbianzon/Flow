@@ -46,6 +46,13 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
+              onClick={(event) => {
+                if (location.pathname !== '/' || !link.href.startsWith('/#')) return
+                event.preventDefault()
+                document
+                  .getElementById(link.href.slice(2))
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }}
               className="text-sm text-muted transition-colors hover:text-foreground"
             >
               {link.label}
@@ -79,6 +86,14 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(event) => {
+                  if (location.pathname !== '/' || !link.href.startsWith('/#')) return
+                  event.preventDefault()
+                  document
+                    .getElementById(link.href.slice(2))
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                  setMobileOpen(false)
+                }}
                 className="text-sm text-muted"
               >
                 {link.label}

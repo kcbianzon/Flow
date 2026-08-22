@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react'
 import { FadeIn, SectionHeader, Card } from './ui/Shared'
+import { Avatar } from './ui/ProductMock'
 
 const testimonials = [
   {
@@ -8,7 +9,6 @@ const testimonials = [
       "We tested several AI writing tools, but Verseo felt the most practical. It's fast, intuitive, and fits naturally into our workflow.",
     name: 'Emma Rodriguez',
     role: 'Content Strategist',
-    avatar: '/images/avatar-emma.png',
   },
   {
     rating: '5,0',
@@ -16,7 +16,6 @@ const testimonials = [
       'Verseo cut our content creation time in half. What used to take hours now takes minutes, and the quality is consistently high.',
     name: 'Sarah Chen',
     role: 'Marketing Manager',
-    avatar: '/images/avatar-sarah.png',
   },
   {
     rating: '5,0',
@@ -24,7 +23,6 @@ const testimonials = [
       'The biggest win for us is consistency. Every email, post, and product update sounds like it comes from the same brand voice.',
     name: 'David Miller',
     role: 'Startup Founder',
-    avatar: '/images/avatar-david.png',
   },
 ]
 
@@ -68,11 +66,7 @@ export default function Testimonials() {
                   "{item.quote}"
                 </blockquote>
                 <div className="mt-6 flex items-center gap-3 border-t border-border pt-4">
-                  <img
-                    src={item.avatar}
-                    alt={item.name}
-                    className="h-10 w-10 rounded-full object-cover"
-                  />
+                  <Avatar name={item.name} />
                   <div>
                     <p className="text-sm font-medium">{item.name}</p>
                     <p className="text-xs text-muted">{item.role}</p>

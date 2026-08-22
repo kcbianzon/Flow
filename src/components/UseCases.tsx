@@ -7,18 +7,21 @@ const useCases = [
     title: 'For marketers',
     description:
       'Create ads, emails, landing pages, and social content - without starting from scratch. Quickly generate multiple variations, test different angles, and adapt your message for every platform in seconds.',
+    tags: ['Ads & campaigns', 'Email sequences', 'Social content'],
   },
   {
     id: '002',
     title: 'For founders',
     description:
       'Ship product updates, pitch decks, and investor emails without hiring a copywriter. Turn rough ideas into polished messaging that builds trust and drives conversions from day one.',
+    tags: ['Product updates', 'Pitch decks', 'Investor emails'],
   },
   {
     id: '003',
     title: 'For teams',
     description:
       'Collaborate on content with shared brand voice settings, templates, and workflows. Keep every team member aligned and scale content production across departments effortlessly.',
+    tags: ['Shared voice', 'Templates', 'Workflows'],
   },
 ]
 
@@ -71,16 +74,14 @@ export default function UseCases() {
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {['Ads & campaigns', 'Email sequences', 'Social content'].map(
-                  (tag) => (
-                    <div
-                      key={tag}
-                      className="rounded-xl bg-surface-muted px-4 py-3 text-center text-sm font-medium"
-                    >
-                      {tag}
-                    </div>
-                  ),
-                )}
+                {useCases[active].tags.map((tag) => (
+                  <div
+                    key={tag}
+                    className="rounded-xl bg-surface-muted px-4 py-3 text-center text-sm font-medium"
+                  >
+                    {tag}
+                  </div>
+                ))}
               </div>
             </div>
           </FadeIn>

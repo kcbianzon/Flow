@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button, SectionLabel } from './ui/Shared'
+import { HeroDashboard, PartnerMarks } from './ui/ProductMock'
 
 const tickerItems = [
   'AI Writer',
@@ -54,24 +55,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative mx-auto mt-16 max-w-5xl"
         >
-          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl shadow-black/10">
-            <div className="flex items-center gap-2 border-b border-border bg-surface-muted px-4 py-3">
-              <div className="flex gap-1.5">
-                <span className="h-3 w-3 rounded-full bg-accent-coral/80" />
-                <span className="h-3 w-3 rounded-full bg-accent-yellow/80" />
-                <span className="h-3 w-3 rounded-full bg-accent-green/80" />
-              </div>
-              <div className="mx-auto flex items-center gap-2 rounded-lg bg-surface px-4 py-1.5 text-xs text-muted">
-                <Sparkles size={12} className="text-accent" />
-                What do you want to write today?
-              </div>
-            </div>
-            <img
-              src="/images/hero-dashboard.png"
-              alt="Verseo AI writing dashboard"
-              className="w-full"
-            />
-          </div>
+          <HeroDashboard />
         </motion.div>
 
         <div className="relative mt-12 overflow-hidden">
@@ -89,23 +73,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60">
-          {[
-            'logo-partner-1.png',
-            'logo-partner-2.png',
-            'logo-partner-3.png',
-            'logo-partner-4.png',
-            'logo-partner-5.png',
-            'logo-partner-6.png',
-          ].map((logo) => (
-            <img
-              key={logo}
-              src={`/images/${logo}`}
-              alt="Partner logo"
-              className="h-6 object-contain grayscale md:h-7"
-            />
-          ))}
-        </div>
+        <PartnerMarks />
       </div>
     </section>
   )

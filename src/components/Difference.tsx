@@ -1,5 +1,6 @@
 import { X, Check, Zap } from 'lucide-react'
 import { FadeIn, SectionHeader } from './ui/Shared'
+import { ComparisonMock } from './ui/ProductMock'
 
 const columns = [
   {
@@ -84,11 +85,7 @@ export default function Difference() {
         </div>
 
         <FadeIn className="mt-12">
-          <img
-            src="/images/difference-comparison.png"
-            alt="Before and after comparison"
-            className="mx-auto w-full max-w-4xl rounded-2xl border border-border shadow-lg"
-          />
+          <ComparisonMock />
         </FadeIn>
       </div>
     </section>

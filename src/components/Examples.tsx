@@ -1,8 +1,8 @@
 import { FadeIn, SectionHeader } from './ui/Shared'
+import { ExampleCover } from './ui/ProductMock'
 
 const examples = [
   {
-    image: '/images/example-1.png',
     title: '5 Ways AI Saves Time',
     description:
       'Learn how modern teams use AI to streamline content creation, improve consistency, and free up time for more meaningful work.',
@@ -11,7 +11,6 @@ const examples = [
     time: 'Generated in 3 sec',
   },
   {
-    image: '/images/example-2.png',
     title: 'Ready To Send',
     description:
       'Generate engaging emails with clear messaging, strong structure, and a tone that matches your brand in just a few seconds.',
@@ -20,7 +19,6 @@ const examples = [
     time: 'Generated in 3 sec',
   },
   {
-    image: '/images/example-3.png',
     title: 'Built For Growth',
     description:
       'Create polished product descriptions that communicate benefits clearly, build trust, and support better conversion rates.',
@@ -49,12 +47,8 @@ export default function Examples() {
           {examples.map((example, i) => (
             <FadeIn key={example.title} delay={i * 0.1}>
               <article className="group overflow-hidden rounded-2xl border border-border bg-surface transition-shadow hover:shadow-xl hover:shadow-black/5">
-                <div className="overflow-hidden">
-                  <img
-                    src={example.image}
-                    alt={example.title}
-                    className="w-full transition-transform duration-500 group-hover:scale-105"
-                  />
+                <div className="overflow-hidden transition-transform duration-500 group-hover:scale-[1.02]">
+                  <ExampleCover title={example.title} index={i} />
                 </div>
                 <div className="p-6">
                   <div className="mb-3 flex items-center justify-between">

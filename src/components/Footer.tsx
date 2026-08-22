@@ -50,6 +50,19 @@ export default function Footer() {
             <p className="mt-6 mb-3 font-mono text-xs tracking-wide text-muted uppercase">
               Stay connected
             </p>
+            <div className="flex gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>

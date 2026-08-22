@@ -64,3 +64,7 @@ body {
 .animate-pulse-dot {
   animation: pulse-dot 1.5s ease-in-out infinite;
 }
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}

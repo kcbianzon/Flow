@@ -1,4 +1,4 @@
-# Flow
+# Currently under development | Rework of FocusFlow-Ai
 
 Flow is a modern SaaS landing page and product marketing website for an AI writing platform. The project is built with React, TypeScript, Vite, and Tailwind CSS, and is designed to showcase product positioning, pricing, use cases, testimonials, FAQs, and conversion-focused CTAs.
 
@@ -94,7 +94,9 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ## Contact
 
-For questions or collaboration, contact:
+For questions or collaboration, contact: kenneth bianzon
+
+
 
 - Email: kcbianzon@gmail.com
 
